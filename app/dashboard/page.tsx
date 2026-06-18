@@ -1,32 +1,14 @@
+import { AppShell } from "@/components/AppShell"
 
-export default function Dashboard() {
+export default function DashboardPage() {
   return (
-    <div style={{ padding:40 }}>
-      <h2>📊 Dashboard</h2>
-
-      <div style={{
-        display:'grid',
-        gridTemplateColumns:'repeat(3,1fr)',
-        gap:20,
-        marginTop:20
-      }}>
-        <Card title="Credits" />
-        <Card title="AI Usage" />
-        <Card title="Revenue" />
+    <AppShell>
+      <h1>Dashboard</h1>
+      <div className="stats">
+        <div className="card"><h3>Credits</h3><p>5,000</p></div>
+        <div className="card"><h3>AI Generations</h3><p>128</p></div>
+        <div className="card"><h3>Plan</h3><p>PRO</p></div>
       </div>
-    </div>
-  )
-}
-
-function Card({title}) {
-  return (
-    <div style={{
-      background:'#0B1023',
-      padding:20,
-      borderRadius:16,
-      border:'1px solid rgba(255,255,255,0.05)'
-    }}>
-      {title}
-    </div>
+    </AppShell>
   )
 }

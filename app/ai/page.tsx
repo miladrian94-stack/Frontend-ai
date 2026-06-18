@@ -1,37 +1,20 @@
+import { AppShell } from "@/components/AppShell"
 
-export default function AI() {
+export default function AIStudioPage() {
   return (
-    <div style={{ padding:40 }}>
-      <h2>🤖 AI Studio</h2>
-
-      <div style={{
-        background:'#0B1023',
-        padding:20,
-        borderRadius:16,
-        marginTop:20
-      }}>
-        <textarea
-          placeholder="Describe your idea..."
-          style={{
-            width:'100%',
-            height:120,
-            background:'transparent',
-            color:'white',
-            border:'none',
-            outline:'none'
-          }}
-        />
-        <button style={{
-          marginTop:10,
-          padding:10,
-          background:'#4F46E5',
-          border:'none',
-          borderRadius:10,
-          color:'white'
-        }}>
-          Generate
-        </button>
+    <AppShell>
+      <h1>AI Studio</h1>
+      <div className="composer">
+        <textarea placeholder="اكتب فكرة الأغنية أو المحتوى هنا..." />
+        <div className="row">
+          <span>Cost: 10 credits</span>
+          <button className="btn">Generate</button>
+        </div>
       </div>
-    </div>
+      <div className="card" style={{marginTop:18}}>
+        <h3>Generation Result</h3>
+        <p>سيظهر الناتج هنا بعد الربط الكامل مع API.</p>
+      </div>
+    </AppShell>
   )
 }

@@ -1,17 +1,14 @@
+import { AppShell } from "@/components/AppShell"
 
-export default function Billing() {
+export default function BillingPage() {
   return (
-    <div style={{ padding:40 }}>
-      <h2>💳 Billing</h2>
-
-      <div style={{
-        background:'#0B1023',
-        padding:20,
-        borderRadius:16,
-        marginTop:20
-      }}>
-        PRO Plan - Active
+    <AppShell>
+      <h1>Billing</h1>
+      <div className="plans">
+        <div className="card"><h3>Free</h3><p>100 Credits</p><button className="btn secondary">Current</button></div>
+        <div className="card"><h3>Pro</h3><p>5,000 Credits</p><button className="btn">Upgrade</button></div>
+        <div className="card"><h3>Enterprise</h3><p>Unlimited</p><button className="btn secondary">Contact</button></div>
       </div>
-    </div>
+    </AppShell>
   )
 }
